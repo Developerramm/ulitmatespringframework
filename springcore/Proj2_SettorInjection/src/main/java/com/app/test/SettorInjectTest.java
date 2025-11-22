@@ -17,6 +17,9 @@ public class SettorInjectTest {
 		user = context.getBean("user",User.class);
 		user.showUserInfo();
 		
+		user = context.getBean("user1",User.class);
+		user.showUserInfo();
+		
 		
 		System.out.println("Ram kumar maniyari");
 	}
