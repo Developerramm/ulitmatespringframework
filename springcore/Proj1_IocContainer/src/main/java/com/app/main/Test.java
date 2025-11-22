@@ -16,7 +16,7 @@ public class Test {
 		
 		User u = context.getBean("user",User.class);
 		
-		
+
 		// this is manual object 
 		User user = new User();
 		user.showUser();
