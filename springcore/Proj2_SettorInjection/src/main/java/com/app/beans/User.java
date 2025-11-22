@@ -5,12 +5,19 @@ public class User {
 	private String name;
 	private String email;
 	private String pass;
+	
+	private int roll;
+	
 
+	public void setRoll(int roll) {
+		this.roll = roll;
+	}
+	
 	public User() {
 		System.out.println("User.User()");
 	}
 	public void showUserInfo() {
-		System.out.println(name + " " + email + " " + pass);
+		System.out.println(name + " " + email + " " + pass + " " + roll);
 	}
 	public void setName(String name) {
 		this.name = name;

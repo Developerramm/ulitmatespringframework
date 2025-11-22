@@ -11,12 +11,14 @@
    	<property name="name" value="Ram kumar Singh"></property>
    	<property name="email" value="rammmaniyari@gmail.com"></property>
    	<property name="pass" value="10001"></property>
+   	<property name="roll" value="14785"></property>
    </bean>
    
    <bean class="com.app.beans.User" id="user1">
    	<property name="name" value="Ram Singh"></property>
    	<property name="email" value="ram@gmail.com"></property>
    	<property name="pass" value="100000001"></property>
+   	<property name="roll" value="140005"></property>
    </bean>
 
 </beans>
