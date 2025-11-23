@@ -15,8 +15,9 @@ public class ConstructorInjectionTest {
 		
 		Student student = null;
 		student = context.getBean("student",Student.class);
+		student.startMyCourse();
+		
 		System.out.println(student);
-
 		System.out.println(context);
 		
 		((AbstractApplicationContext)context).close();
