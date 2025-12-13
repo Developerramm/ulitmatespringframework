@@ -2,6 +2,14 @@ package OOPs.inheritance;
 
 public class Vehicle {
 
+    public Vehicle(String type){
+        System.out.println("Vehicle constructor is called " + type);
+    }
+
+    public Vehicle(){
+        System.out.println("Vehicle default constructor is called");
+    }
+
     public void start(){
         System.out.println("Vehicle.start()");
     }
