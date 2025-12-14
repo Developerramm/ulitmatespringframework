@@ -1,8 +1,6 @@
 package OOPs.polymorphism;
 
-public class Language {
+public abstract class Language {
 
-    public void greeting(){
-        System.out.println("This is Language greeting");
-    }
+   abstract public void greeting();
 }
