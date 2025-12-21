@@ -1,13 +1,18 @@
 package com.app.student.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+
 import javax.sql.DataSource;
 
 import com.app.student.entity.StudentEntity;
 
-public class StudentDaoImpl implements StudentDao {
+public final class StudentDaoImpl implements StudentDao {
 	
-	private final static String INSERT_STUDENT = "INSERT INTO student_details"
-			+ "(id,name,email,course_name,obtained_marks, grade) values(?,?,?,?,?,?)";
+	private final static String INSERT_STUDENT = "INSERT INTO student_details "
+	           + "(id, name, email, course_name, obtained_marks, grade) "
+	           + "VALUES (?, ?, ?, ?, ?, ?)";;
 	
 	private DataSource dataSource;
 	
@@ -16,9 +21,29 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public int saveStudent(StudentEntity entity) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int saveStudent(StudentEntity entity) throws Exception {
+		
+		// save the student to the database table
+		PreparedStatement pstmt = null;
+		Connection con = dataSource.getConnection();
+		
+		 pstmt = con.prepareStatement(INSERT_STUDENT);
+		 
+		 pstmt.setInt(1, entity.getId());
+		 pstmt.setString(2, entity.getName());
+		 pstmt.setString(3,entity.getEmail());
+		 pstmt.setString(4, entity.getCourseName());
+		 pstmt.setInt(5, entity.getObtMarks());
+		 pstmt.setString(6, entity.getGrade());
+		 
+		 
+		 int i = pstmt.executeUpdate();
+		 
+		 pstmt.close();
+		 con.close();
+		
+		
+		return i;
 	}
 
 }

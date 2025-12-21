@@ -4,6 +4,6 @@ import com.app.student.entity.StudentEntity;
 
 public interface StudentDao {
 	
-	public int saveStudent(StudentEntity entity);
+	public int saveStudent(StudentEntity entity) throws Exception;
 
 }

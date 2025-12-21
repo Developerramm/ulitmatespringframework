@@ -1,8 +1,8 @@
-package com.app.student.entity;
+package com.app.student.dto;
 
 import java.io.Serializable;
 
-public class StudentEntity implements Serializable{
+public final class StudentDto implements Serializable{
 	
 	private Integer id;
 	private String name;

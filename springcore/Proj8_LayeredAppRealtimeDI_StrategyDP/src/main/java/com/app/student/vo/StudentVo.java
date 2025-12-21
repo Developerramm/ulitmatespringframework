@@ -1,26 +1,19 @@
-package com.app.student.entity;
+package com.app.student.vo;
 
 import java.io.Serializable;
 
-public class StudentEntity implements Serializable{
+public class StudentVo implements Serializable{
 	
-	private Integer id;
+	private String id;
 	private String name;
 	private String email;
 	private String courseName;
-	private Integer obtMarks;
+	private String obtMarks;
 	private String grade;
-	
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -29,23 +22,31 @@ public class StudentEntity implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getCourseName() {
 		return courseName;
 	}
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
-	public Integer getObtMarks() {
+	public String getObtMarks() {
 		return obtMarks;
 	}
-	public void setObtMarks(Integer obtMarks) {
+	public void setObtMarks(String obtMarks) {
 		this.obtMarks = obtMarks;
 	}
 	public String getGrade() {
 		return grade;
 	}
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
+//	public void setGrade(String grade) {
+//		this.grade = null;
+//	}
+	
+	
 
 }

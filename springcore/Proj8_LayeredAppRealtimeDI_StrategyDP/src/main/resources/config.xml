@@ -12,6 +12,20 @@
     	<property name="username" value="root"></property>
     	<property name="password" value="ramkumar"></property>
     </bean>
+    
+    <bean class="com.app.student.dao.StudentDaoImpl" id="studentDao">
+    	<constructor-arg name="dataSource" ref="ds"></constructor-arg>
+    </bean>
+    
+    <bean class="com.app.student.service.StudentServiceImpl" id="studentService">
+    	<constructor-arg name="studentDao" ref="studentDao"></constructor-arg>
+    </bean>
+    
+    <bean class="com.app.student.controller.StudentMainController" id="controller">
+    	<constructor-arg name="studentService" ref="studentService"></constructor-arg>
+    </bean>
+    
+    
    
     
 
