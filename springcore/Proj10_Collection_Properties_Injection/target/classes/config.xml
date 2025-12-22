@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+	<bean class="com.app.beans.Employee" id="emp">
+		<property name="employeeDesignation">
+			<props>
+				<prop key="Ram kumar">java fullstack developer</prop>
+				<prop key="rohan">React js developer</prop>
+				<prop key="aman">Intern</prop>
+				<prop key="Sherya">Backend Developer</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
