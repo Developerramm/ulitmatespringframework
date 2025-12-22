@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.app.beans.Student" id="student">
+    	<property name="name" value="Ram kumar" />
+    	<property name="marks">
+    		<array>
+	    		<value>99</value>
+	    		<value>88</value>
+	    		<value>98</value>
+	    		<value>90</value>
+    		</array>
+    	</property>
+    </bean>
+    
+    <bean class="java.util.Date" id="d1">
+    	<property name="year" value="125" />
+    	<property name="month" value="3" />
+    	<property name="date" value="24" />
+    </bean>
+    
+    <bean class="java.util.Date" id="d2">
+    	<property name="year" value="124" />
+    	<property name="month" value="5" />
+    	<property name="date" value="12" />
+    </bean>
+    
+    <bean class="com.app.beans.Faculty" id="faculty">
+    	<property name="name">
+    		<list>
+    			<value>Ram kumar</value>
+    			<value>Shyam kumar</value>
+    			<value>rohan Das</value>
+    			<value>Sarita kumari</value>
+    		</list>
+    	</property>
+    	<property name="joiningDate">
+    		<list>
+    			<ref bean="d1" />
+    			<ref bean="d2" />
+    		</list>
+    	</property>
+    </bean>
+    
+    <bean class="com.app.beans.User" id="user">
+    	<property name="phone">
+    		<set value-type="java.lang.Long">
+    			<value>78954632</value>
+    			<value>99999999</value>
+    			<value>88888888</value>
+    			<value>00000000</value>
+    		</set>
+    	</property>
+    	
+    	<property name="email">
+    		<set>
+    			<value>a@gmail.com</value>
+    			<value>b@gmail.com</value>
+    			<value>c@gmail.com</value>
+    		</set>
+    	</property>
+    
+    </bean>
+    
+    <bean class="com.app.beans.CollegeInfo" id="info">
+    	<property name="hod">
+    		<map>
+    			<entry key="BSC" value="RK Raman"></entry>
+    			<entry key="physics" value="hc verma"></entry>
+    		</map>
+    	</property>
+    	
+    	<property name="holidays">
+    		<map>
+    			<entry key="holi" value-ref="d1"></entry>
+    			<entry key="deepawali" value-ref="d2"></entry>
+    		</map>
+    	</property>
+    </bean>
+   
+</beans>
