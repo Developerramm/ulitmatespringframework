@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    
+     <bean class ="com.app.beans.Car" id="car" abstract="true">
+    	<property name="company" value="Hundai"></property>
+    	<property name="tyre" value="MRF"></property>
+    	<property name="fuelType" value="petrol"></property>
+    	
+    </bean>
+    
+    
+    <bean class ="com.app.beans.Car" id="car2">
+    	<property name="model" value="Creta 2026" />
+    	<property name="enginePower" value="2300"></property>
+    	<property name="regNo" value="xh-32453432"></property>
+    </bean>
+    
+    
+     <bean class ="com.app.beans.Car" id="car1" parent="car">
+    	<property name="model" value="Creta 2025" />
+    	<property name="enginePower" value="2450"></property>
+    	<property name="regNo" value="xh-2000032"></property>
+    </bean>
+    
+    
+  
+
+</beans>
