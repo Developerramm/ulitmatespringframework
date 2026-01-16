@@ -18,8 +18,9 @@ public class CollectiongMergingTest {
 		Student s2 = context.getBean("s2",Student.class);
 		System.out.println(s2);
 		
-		
+		Student s3 = context.getBean("com.app.beans.Student",Student.class);
 		System.out.println(student);
+		System.out.println(s3);
 		
 		((AbstractApplicationContext)context).close();
 	}

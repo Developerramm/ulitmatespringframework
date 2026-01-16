@@ -38,6 +38,16 @@
    	</property>
    
    </bean>
+   
+   <bean class="com.app.beans.Student">
+   		<property name="subjects">
+   			<set>
+   				<value>Database</value>
+   				<value>Testing</value>
+   				<value>Backend developer</value>
+   			</set>
+   		</property>
+   </bean>
     
     
     
