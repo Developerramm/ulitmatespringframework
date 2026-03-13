@@ -12,6 +12,8 @@ class A {
 
         void m2() {
             System.out.println("A.B.m2()");
+            System.out.println(i);
+            m1();
         }
     }
 }
@@ -26,10 +28,14 @@ public class Test {
         System.out.println(a.i);
         a.m1();
 
+        // System.out.println(a.j);
+
         A.B ab = new A().new B();
 
         System.out.println(ab.j);
         ab.m2();
+
+        // System.out.println(ab.i);
 
         A.B ab1 = a.new B();
         System.out.println(ab1.j);
