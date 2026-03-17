@@ -12,7 +12,15 @@ public class Test1 {
 		
 		System.out.println(arr[5]);
 		
-		System.out.println(arr[10]);
+//		System.out.println(arr[10]);
+		
+		String str = new String("Ram kumar maniyari");
+		
+		System.out.println(str.charAt(5));
+		System.out.println(str.charAt(2));
+		
+		System.out.println(str.charAt(200));
+		
 		
 	}
 
