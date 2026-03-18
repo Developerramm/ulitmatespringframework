@@ -6,7 +6,7 @@ class Employee{
 		System.out.println("Employee class is loading.....");
 	}
 	
-	public Employee(int i) {
+	private Employee() {
 		
 		System.out.println("Employee object is creating...");
 	}
