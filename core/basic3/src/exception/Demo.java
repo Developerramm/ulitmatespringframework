@@ -17,7 +17,7 @@ public class Demo {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Exception handling in java");
 		
-		Class c = Class.forName("exception.Employee");
+		Class<?> c = Class.forName("exception.Employee");
 		
 		Object obj = c.newInstance();
 		
