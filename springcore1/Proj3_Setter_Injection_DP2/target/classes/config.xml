@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.app.beans.Course" id="course"></bean>
+    
+	<bean class="com.app.beans.Student" id="student">
+		<property name="name" value="Ram Kumar"></property>
+		<property name="email" value="ram@gmail.com"></property>
+		<property name="username" value="@RAMMAN"></property>
+		
+		<property name="course" ref="course"></property>
+	</bean>
+	
+	<bean class="com.app.beans.Employee" id="emp">
+		<property name="empName" value="RAm kumar"></property>
+		<property name="dept" value="Developer"></property>
+		<property name="empDob" ref="d1"></property>
+	</bean>
+	
+	<bean class="java.util.Date" id="d1">
+		<property name="date" value="15"></property>
+		<property name="month" value="3"></property>
+		<property name="year" value="126"></property>
+	</bean>
+
+</beans>
